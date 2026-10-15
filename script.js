@@ -11,7 +11,7 @@ const modos_configuracion = {
   },
   modo_2: {
     palabras: [
-      { palabra: "CALIFICATIONS", pista: "The scores or grades you get in school" },
+      { palabra: "PENCIL", pista: "A tool used for writing or drawing" },
       { palabra: "WHITEBOARD", pista: "A large white surface in a classroom for writing" },
       { palabra: "SENTENCES", pista: "Groups of words that make a complete thought" },
       { palabra: "RESULTS", pista: "The final outcome of a test or exam" }
@@ -29,7 +29,7 @@ const modos_configuracion = {
   },
   modo_4: {
     palabras: [
-      { palabra: "COMPUTER", pista: "An electronic device used for studying and work" },
+      { palabra: "COMPUTER", pista: "An electronic device used for studying and working" },
       { palabra: "PASSWORD", pista: "A secret word to log into an account" },
       { palabra: "TEST", pista: "An exam to check what you learned" },
       { palabra: "STUDENT", pista: "A person who goes to school to learn" }
@@ -254,7 +254,7 @@ function finalizarJuego(gano) {
   if (gano) mostrarPremio(modoClaveActual);
 }
 
-// ====== PREMIO ======
+//premio
 
 function ocultarPremio() {
   clearTimeout(timerPremio);
@@ -284,7 +284,7 @@ function cerrarPremio() {
   ocultarPremio();
 }
 
-// ====== MENÚS Y MODOS ======
+//menú y modos
 
 function pausarJuego() {
   if (juegoTerminado || pausado) return;
@@ -325,7 +325,7 @@ function reiniciarJuego() {
   iniciarJuego();
 }
 
-// ====== UI HELPERS ======
+//ui 
 
 function setBuho(estado, ms) {
   clearTimeout(timerBuho);
@@ -355,7 +355,7 @@ function actualizarProgreso() {
   progreso.style.width = (aciertos / listaPalabras.length * 100) + "%";
 }
 
-// ====== EVENT LISTENERS ======
+//event listeners
 
 btnPausa.addEventListener("click", pausarJuego);
 btnPista.addEventListener("click", pedirPista);
